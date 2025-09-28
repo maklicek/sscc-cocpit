@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>🛰️ SSCC – Návrhový cockpit</title>
+
+  <!-- Styl orbitální paluby -->
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #0f2027;
+      color: #fff;
+      padding: 2em;
+    }
+
+    select, button {
+      background-color: #00bcd4;
+      color: white;
+      border: none;
+      padding: 0.5em 1em;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 1em;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      margin-top: 2em;
+    }
+  </style>
+  <script>
+  async function loadSection(section) {
+    const lang = document.getElementById("lang").value;
+    const paths = {
+      shrnuti: {
+        cz: "SSCC_ExportCZ/Shrnutí.txt",
+        en: "SSCC_ExportEN/Summary.txt"
+      }
+    };
+    const path = paths[section][lang];
+    try {
+      const response = await fetch(path);
+      const text = await response.text();
+      document.getElementById("content").innerText = text;
+    } catch (error) {
+      document.getElementById("content").innerText = "🚫 Nelze načíst obsah.";
+    }
+  }
+</script>
+</head>
+<body>
+  <h1>🚀 Testovací cockpit</h1>
+  <p>Vítej na orbitální palubě SSCC.</p>
+
+
+  <select>
+    <option>Čeština</option>
+    <option>English</option>
+  </select>
+
+  <img src="img/ccus.jpg" alt="Test CCUS">
+</body>
+<section id="content">
+  <p>Vyber sekci pro zobrazení grantového bloku.</p>
+</section>
+</html>
+<button onclick="loadSection('shrnuti')">Načíst Shrnutí</button>
