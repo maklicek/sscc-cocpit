@@ -1,0 +1,37 @@
+Readne.md
+# SSCC Cockpit 🚀
+
+Modulární cockpit pro grantové mise v oblasti udržitelné energie.  
+Veřejné rozhraní pro výběr, zobrazení a export grantových bloků v CZ/EN.
+
+## 🌌 Funkce
+
+- Výběr grantových sekcí (bloky, partneři, rozpočet, časová osa)
+- Multijazyčný režim (čeština / angličtina)
+- Stylizace orbitálního rozhraní (Orbitron font, gradienty, modulární panely)
+- Exportní příprava pro PDF generátor (v soukromém backendu)
+
+## 🧭 Struktura
+
+## 🛰️ Nasazení
+
+Projekt je dostupný přes GitHub Pages:  
+👉 [https://maklicek.github.io/sscc-kokpit/](https://maklicek.github.io/sscc-kokpit/)
+
+## 🔒 Backend
+
+Soukromý repozitář `Maklicek-sscc` obsahuje:
+- Grantové texty a šablony
+- Zálohy a pracovní verze
+- Exportní logiku pro PDF
+
+## 🎨 Styl
+
+Orbitálně laděný design s důrazem na přehlednost, eleganci a radost z práce.  
+Fonty: Orbitron, Inter  
+Barvy: gradienty (modrá → fialová), jemné stíny, modulární panely
+
+---
+
+> Tento cockpit je součástí pilotního projektu **SolarSpace Carbon Cycle**  
+> a připravuje podklady pro grantové mise ESA / TAČR.
